@@ -1,5 +1,5 @@
 import sys
-from openai_handler import generate_text
+import openai_handler
 
 def main():
     # 检查是否提供了主题参数
@@ -13,11 +13,17 @@ def main():
     
     try:
         # 调用OpenAI API生成文本
-        generated_text = generate_text(theme)
+        generated_text = openai_handler.generate_text(theme)
         
         # 打印生成的内容
-        print("\n=== 生成的内容 ===")
+        print("\n=== 生成的关键词 ===")
         print(generated_text)
+        
+        # 使用关键词搜索并显示结果
+        search_results = openai_handler.web_key_search(generated_text)
+        # 打印生成的内容
+        print("\n=== 使用关键词搜索并显示结果 ===")
+        print(search_results)
         
     except Exception as e:
         print(f"发生错误: {str(e)}")
