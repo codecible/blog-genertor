@@ -6,11 +6,14 @@
 
 1. 确保已安装Python 3.7或更高版本
 
-2. 安装项目依赖：   ```bash
-   # 使用requirements.txt安装所有依赖
-   pip install -r requirements.txt   ```
+2. 安装项目依赖：   
+    ```bash
+    # 使用requirements.txt安装所有依赖
+    pip install -r requirements.txt   
+    ```
 
-3. 设置OpenAI API密钥：   ```bash
+3. 设置OpenAI API密钥：   
+    ```bash
    # Linux/Mac
    export OPENAI_API_KEY='你的API密钥'
    
@@ -36,3 +39,4 @@
 ## 使用方法
 
 在命令行中运行以下命令：
+python main.py "你的主题"
